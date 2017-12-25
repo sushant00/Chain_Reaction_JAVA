@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="612.0" prefWidth="520.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UIController">
+   <children>
+      <AnchorPane fx:id="Bar_Home" prefHeight="80.0" prefWidth="520.0" style="-fx-background-radius: 5 5 0 0; -fx-background-color: rgba(42,181,211,0.9);">
+         <children>
+            <MenuButton fx:id="btn_dropMenu" layoutX="340.0" layoutY="25.0" mnemonicParsing="false" textFill="WHITE" visible="false">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#newGame" text="New Game" />
+                <MenuItem mnemonicParsing="false" onAction="#home" text="Home" />
+              </items>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
+            <ImageView fx:id="btn_settings" fitHeight="45.0" fitWidth="45.0" layoutX="401.0" layoutY="18.0" onMouseClicked="#settings" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_quit" fitHeight="45.0" fitWidth="45.0" layoutX="461.0" layoutY="18.0" onMouseClicked="#quit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/quit.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_home" fitHeight="45.0" fitWidth="45.0" layoutX="14.0" layoutY="18.0" onMouseClicked="#home" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_dropDown" fitHeight="45.0" fitWidth="45.0" layoutX="337.0" layoutY="20.0" onMouseClicked="#dropDown" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/dropDown.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_undo" fitHeight="32.0" fitWidth="38.0" layoutX="282.0" layoutY="27.0" onMouseClicked="#undo" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/undo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      
+      <AnchorPane fx:id="Pane_Settings" layoutY="95.0" prefHeight="600.0" prefWidth="520.0" style="-fx-background-color: linear-gradient( from 25% 0% to 100% 90%,#2AB5D3, #57CFB0); -fx-background-radius: 0 0 5 5;" visible="false">
+         <children>
+      		<ImageView fitHeight="23.0" fitWidth="23.0" layoutX="413.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pointer.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="212.0" layoutY="29.0" text="Orb Color" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font></Label>
+            <ColorPicker fx:id="colorPick1" blendMode="HARD_LIGHT" layoutX="316.0" layoutY="89.0" onAction="#action_colorPick" style="-fx-background-color: null">
+	            <value>
+	        		<Color blue="0.0" green="0.0" red="1.0" />
+	    		</value>
+	    	</ColorPicker>
+            <Label layoutX="128.0" layoutY="88.0" text="Player 1" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font></Label>
+            <ColorPicker fx:id="colorPick2" blendMode="HARD_LIGHT" layoutX="316.0" layoutY="141.0" onAction="#action_colorPick" style="-fx-background-color: null">
+	            <value>
+	        		<Color blue="0.0" green="1.0" red="0.0" />
+	    		</value>
+	    	</ColorPicker>
+            <Label layoutX="128.0" layoutY="140.0" text="Player 2" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font></Label>
+            <ColorPicker fx:id="colorPick3" blendMode="HARD_LIGHT" layoutX="316.0" layoutY="198.0" onAction="#action_colorPick" style="-fx-background-color: null">
+	            <value>
+	        		<Color blue="1.0" green="0.0" red="0.0" />
+	    		</value>
+	    	</ColorPicker>
+            <Label layoutX="128.0" layoutY="197.0" text="Player 3" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font></Label>
+            <ColorPicker fx:id="colorPick4" blendMode="HARD_LIGHT" layoutX="316.0" layoutY="259.0" onAction="#action_colorPick" style="-fx-background-color: null">
+	            <value>
+	        		<Color blue="0.0" green="1.0" red="1.0" />
+	    		</value>
+	    	</ColorPicker>
+            <Label layoutX="128.0" layoutY="258.0" text="Player 4" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font></Label>
+            <ColorPicker fx:id="colorPick5" blendMode="HARD_LIGHT" layoutX="316.0" layoutY="315.0" onAction="#action_colorPick" style="-fx-background-color: null">
+	            <value>
+	        		<Color blue="1.0" green="0.0" red="1.0" />
+	    		</value>
+	    	</ColorPicker>
+            <Label layoutX="128.0" layoutY="314.0" text="Player 5" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font></Label>
+            <ColorPicker fx:id="colorPick6" blendMode="HARD_LIGHT" layoutX="316.0" layoutY="378.0" onAction="#action_colorPick" style="-fx-background-color: null">
+	            <value>
+	        		<Color blue="1.0" green="1.0" red="0.0" />
+	    		</value>
+	    	</ColorPicker>
+            <Label layoutX="128.0" layoutY="377.0" text="Player 6" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font></Label>
+            <ColorPicker fx:id="colorPick7" blendMode="HARD_LIGHT" layoutX="316.0" layoutY="441.0" onAction="#action_colorPick" style="-fx-background-color: null">
+	            <value>
+	        		<Color blue="0.2" green="0.2" red="0.8" />
+	    		</value>
+	    	</ColorPicker>
+            <Label layoutX="128.0" layoutY="440.0" text="Player 7" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font></Label>
+            <ColorPicker fx:id="colorPick8" blendMode="HARD_LIGHT" layoutX="316.0" layoutY="503.0" onAction="#action_colorPick" style="-fx-background-color: null">
+	            <value>
+	        		<Color blue="0.0" green="0.0" red="0.0" />
+	    		</value>
+	    	</ColorPicker>
+            <Label layoutX="128.0" layoutY="502.0" text="Player 8" textFill="#f8f3f3">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font></Label>
+         </children>
+       </AnchorPane>
+      
+      <AnchorPane fx:id="Pane_Grid" layoutY="95.0" prefHeight="600.0" prefWidth="520.0" style="-fx-background-color: linear-gradient( from 30% 30% to 100% 60%,#2AB5D3, #57CFB0); -fx-background-radius: 0 0 5 5;" />
+      <AnchorPane fx:id="Pane_GameOver" layoutY="95.0" prefHeight="600.0" prefWidth="520.0" style="-fx-background-color: rgba(42,181,211,0.9); -fx-background-radius: 0 0 5 5;" visible="false">
+         <children>
+            <Pane layoutX="160.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" style="fx-background-radius: 5 5 5 5; -fx-background-color: rgba(42,181,211,0.7);">
+               <children>
+                  <Label fx:id="label_gameOver" prefHeight="108.0" prefWidth="200.0" text="Player Won" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font></Label>
+                  <Button fx:id="btn_playAgain" layoutX="14.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#newGame" onMouseEntered="#mouseEntered_playAgain" onMouseExited="#mouseExited_playAgain" prefHeight="58.0" prefWidth="161.0" text="Play Again" textFill="WHITE">
+                     <font>
+                        <Font name="Symbol" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      
+       <AnchorPane fx:id="Pane_Home" layoutY="95.0" prefHeight="600.0" prefWidth="520.0" style="-fx-background-color: linear-gradient( from 30% 30% to 100% 60%,#2AB5D3, #57CFB0); -fx-background-radius: 0 0 5 5;">
+         <children>
+            <Circle fx:id="sphere_Green" fill="#51dd0b" layoutX="354.0" layoutY="173.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="sphere_Blue" fill="DODGERBLUE" layoutX="181.0" layoutY="273.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="sphere_Red" fill="#e83d1b" layoutX="318.0" layoutY="223.0" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="sphere_Yellow" fill="#edf508" layoutX="384.0" layoutY="293.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Button fx:id="btn_newGame" layoutX="181.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#newGame" onMouseEntered="#mouseEntered_newGame" onMouseExited="#mouseExited_newGame" prefHeight="58.0" prefWidth="161.0" text="New Game" textFill="WHITE">
+               <font>
+                  <Font name="Symbol" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_resume" layoutX="181.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#resumeGame" onMouseEntered="#mouseEntered_resume" onMouseExited="#mouseExited_resume" prefHeight="58.0" prefWidth="161.0" text="Resume" textFill="WHITE">
+               <font>
+                  <Font name="Symbol" size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="25.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pointer.png" />
+               </image>
+            </ImageView>
+            <ChoiceBox fx:id="chBox_numPlayers" layoutX="202.0" layoutY="135.0" prefHeight="31.0" prefWidth="116.0" value="2 Players">
+	            <items>
+	                <FXCollections fx:factory="observableArrayList">
+	                    <String fx:value="2 Players" />
+	                    <String fx:value="3 Players" />
+	                    <String fx:value="4 Players" />
+	                    <String fx:value="5 Players" />
+	                    <String fx:value="6 Players" />
+	                    <String fx:value="7 Players" />
+	                    <String fx:value="8 Players" />
+	                </FXCollections>
+	            </items>
+	        </ChoiceBox>
+            <ChoiceBox fx:id="chBox_gridSize" layoutX="202.0" layoutY="76.0" prefHeight="31.0" prefWidth="116.0" value="9 x 6">
+	            <items>
+	                <FXCollections fx:factory="observableArrayList">
+	                    <String fx:value="9 x 6" />
+	                    <String fx:value="15 x 10" />
+	                </FXCollections>
+	            </items>
+	        </ChoiceBox>
+            <Button fx:id="btn_host" layoutX="181.0" layoutY="223.0" mnemonicParsing="false" onMouseClicked="#hotspot" onMouseEntered="#mouseEntered_host" onMouseExited="#mouseExited_host" text="Host" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_join" layoutX="286.0" layoutY="223.0" mnemonicParsing="false" onMouseClicked="#join" onMouseEntered="#mouseEntered_join" onMouseExited="#mouseExited_join" text="Join" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Pane_Join" layoutY="95.0" prefHeight="600.0" prefWidth="520.0" style="-fx-background-color: rgba(42,181,211,0.9); -fx-background-radius: 0 0 5 5;" visible="false">
+         <children>
+            <Pane layoutX="160.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" style="fx-background-radius: 5 5 5 5; -fx-background-color: rgba(42,181,211,0.7);">
+               <children>
+                  <Label fx:id="label_join" layoutY="-17.0" prefHeight="108.0" prefWidth="200.0" text="Enter IP Address" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_joinLAN" layoutX="20.0" layoutY="128.0" mnemonicParsing="false" onMouseClicked="#startLANGame" onMouseEntered="#mouseEntered_joinLAN" onMouseExited="#mouseExited_joinLAN" prefHeight="58.0" prefWidth="161.0" text="Join" textFill="WHITE">
+                     <font>
+                        <Font name="Symbol" size="20.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textField_ip" layoutX="7.0" layoutY="69.0" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      
+   </children>
+</AnchorPane>
