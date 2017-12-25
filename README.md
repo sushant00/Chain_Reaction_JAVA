@@ -1,8 +1,9 @@
  # Chain_Reaction_JAVA
+ Chain Reaction Multiplayer Game with LAN WiFi Multiplayer support
+
 <br><br>
-<h3> &nbsp;&nbsp;&nbsp;&nbsp; Developers</h3>
+<h3>Developers</h3>
     
-Chain Reaction Multiplayer Game with LAN WiFi Multiplayer support
 -----------------------------------------------------------------------------------------------------------------------------------
 
 Sushant Kumar Singh        [sushant00](https://github.com/sushant00)
