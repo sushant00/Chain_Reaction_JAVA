@@ -11,3 +11,12 @@ Sushant Kumar Singh        [sushant00](https://github.com/sushant00)
 Dhruv Bhagat  [dhruv16146](https://github.com/dhruv16146)
 <br>
 
+
+<h3>GUI Screenshots </h3>
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+<img src="https://raw.githubusercontent.com/sushant00/Chain_Reaction_JAVA/master/UI_Screenshot/home1.png" width="430"></img>
+<img src="https://raw.githubusercontent.com/sushant00/Chain_Reaction_JAVA/master/UI_Screenshot/home2.png" width="430"></img><br>
+<img src="https://raw.githubusercontent.com/sushant00/Chain_Reaction_JAVA/master/UI_Screenshot/settings.png" width="430"></img>
+<img src="https://raw.githubusercontent.com/sushant00/Chain_Reaction_JAVA/master/UI_Screenshot/grid.png" width="430"></img>
