@@ -8,7 +8,7 @@
 
 Sushant Kumar Singh        [sushant00](https://github.com/sushant00)
 <br>
-Dhruv Bhagat  [dhruv16146](https://github.com/dhruv16146)
+Dhruv  [dhruv16146](https://github.com/dhruv16146)
 <br>
 
 
